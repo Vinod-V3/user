@@ -41,8 +41,8 @@ module.exports = {
 		req.checkBody('name')
 			.optional({ checkFalsy: true })
 			.trim()
-			.matches(/^[A-Za-z ]+$/)
-			.withMessage('This field can only contain alphabets')
+			.matches(process.env.NAME_REGEX)
+			.withMessage(`Name field does not match the required pattern: ${process.env.NAME_REGEX}`)
 
 		// Validate email (optional)
 		req.checkBody('email')
