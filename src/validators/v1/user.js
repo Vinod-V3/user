@@ -14,7 +14,7 @@ module.exports = {
 			.notEmpty()
 			.withMessage('name field is empty')
 			.matches(process.env.NAME_REGEX)
-			.withMessage(`Name field does not match the required pattern: ${process.env.NAME_REGEX}`)
+			.withMessage(process.env.NAME_REGEX_MESSAGE)
 		req.checkBody('about')
 			.optional()
 			.trim()

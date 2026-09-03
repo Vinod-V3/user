@@ -42,7 +42,7 @@ module.exports = {
 			.optional({ checkFalsy: true })
 			.trim()
 			.matches(process.env.NAME_REGEX)
-			.withMessage(`Name field does not match the required pattern: ${process.env.NAME_REGEX}`)
+			.withMessage(process.env.NAME_REGEX_MESSAGE)
 
 		// Validate email (optional)
 		req.checkBody('email')
