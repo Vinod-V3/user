@@ -529,7 +529,7 @@ let enviromentVariables = {
 	NAME_REGEX: {
 		message: 'Required NAME_REGEX',
 		optional: true,
-		default: '^[A-Za-z\\u0900-\\u0DFF\\u1C50-\\u1C7F\\uABC0-\\uABFF\\uAAE0-\\uAAFF\\s.,\\-]+$',
+		default: '^[A-Za-z\\u0900-\\u0DFF\\u1C50-\\u1C7F\\uA880-\\uA8DF\\uAAE0-\\uAAFF\\uABC0-\\uABFF\\s.,\\-]+$',
 	},
 }
 let success = true
